@@ -1,0 +1,131 @@
+<Siml>
+  <Concept Type="public" Name="General">
+    <Model>
+      <Pattern>HELLO *</Pattern>
+      <Response>Hello User!</Response>
+    </Model>
+
+    <Model>
+      <Pattern>
+        <Item>WHO MADE YOU</Item>
+        <Item>WHO IS YOUR CREATOR</Item>
+        <Item>WHAT IS THE NAME OF YOUR PROGRAMMER</Item>
+        <Item>WHO PROGRAMMED YOU</Item>
+      </Pattern>
+      <Response>
+        <Random>
+          <Item>Adam Milton-Barker programmed me for the Hackster / Arduino / Microsoft World Maker Challenge.</Item>
+          <Item>Adam Milton-Barker is my creator, I was programmed for the Hackster / Arduino / Microsoft World Maker Challenge.</Item>
+          <Item>Adam Milton-Baker.</Item>
+        </Random>
+      </Response>
+    </Model>
+
+    <Model>
+      <Pattern>APPLICATIONWELCOME</Pattern>
+      <Response>
+        <Random>
+          <Item>Hi, my name is TIA, the TechBubble Intelligent Assistant. Please choose your login method to continue.</Item>
+          <Item>Please choose your login method to continue.</Item>
+          <Item>Choose a login method to continue.</Item>
+          <Item>Hi please login using the options below.</Item>
+        </Random>
+      </Response>
+    </Model>
+
+    <Model>
+      <Pattern>AUTHWAYNFCRESPONSE</Pattern>
+      <Response>Thank you, please select the COM port that your AuthWay NFC is connected to to continue.</Response>
+    </Model>
+
+    <Model>
+      <Pattern>AUTHWAYFPRESPONSE</Pattern>
+      <Response>Thank you, please select the COM port that your AuthWay FP is connected to to continue.</Response>
+    </Model>
+
+    <Model>
+      <Pattern>PASSWORDRESPONSE</Pattern>
+      <Response>Thank you, please enter your credentials to continue.</Response>
+    </Model>
+
+    <Model>
+      <Pattern>
+        <Item>WHAT IS YOUR NAME</Item>
+        <Item>WHAT CAN I CALL YOU</Item>
+        <Item>WHO ARE YOU</Item>
+        <Item>WHAT ARE YOU</Item>
+      </Pattern>
+      <Response>My name is TIA, the TechBubble Intelligent Assistant.</Response>
+    </Model>
+
+    <Model>
+      <Pattern>
+        <Item>WHAT CAN YOU DO</Item>
+        <Item>WHAT DO YOU DO</Item>
+      </Pattern>
+      <Response>I can help you monitor and control your IntelliLan IoT Network and devices.</Response>
+    </Model>
+
+    <Model>
+      <Pattern>
+        <Item>MICROCHIP LOGIN</Item>
+      </Pattern>
+      <Response>Thank you, please select the COM port that your AuthWay NFC is connected to to continue.</Response>
+    </Model>
+
+    <Model>
+      <Pattern>
+        <Item>UPDATE PROXIMITY *</Item>
+      </Pattern>
+      <Response>
+        <Random>
+          <Item>Setting maximum proximity range, please wait.</Item>
+          <Item>One second while I update the max proximity range.</Item>
+          <Item>Max proximity range updating, please wait.</Item>
+          <Item>Your wish is my command, I shall now set the maximum proximity range, don't forget a tip.</Item>
+        </Random>
+      </Response>
+    </Model>
+
+    <Model>
+      <Pattern>
+        <Item>UPDATE TEMPERATURE *</Item>
+      </Pattern>
+      <Response>
+        <Random>
+          <Item>Setting maximum temperature range, please wait.</Item>
+          <Item>One second while I update the max temperature range.</Item>
+          <Item>Max temperature range updating, please wait.</Item>
+          <Item>Your wish is my command, I shall now set the maximum temperature range, don't forget a tip.</Item>
+        </Random>
+      </Response>
+    </Model>
+
+    <Model>
+      <Pattern>
+        <Item>RELOAD DATA</Item>
+      </Pattern>
+      <Response>
+        <Random>
+          <Item>Reloading sensor data, please wait.</Item>
+          <Item>One second while I reload the sensor data.</Item>
+          <Item>Sensor data reloading, please wait.</Item>
+          <Item>Your wish is my command, I shall now reload the sensor data, don't forget a tip.</Item>
+        </Random>
+      </Response>
+    </Model>
+
+    <Model>
+      <Pattern>
+        <Item>*</Item>
+      </Pattern>
+      <Response>
+        <Random>
+          <Item>I am not sure about that.</Item>
+          <Item>Sorry I don't know.</Item>
+        </Random>
+      </Response>
+    </Model>
+
+  </Concept>
+</Siml>
