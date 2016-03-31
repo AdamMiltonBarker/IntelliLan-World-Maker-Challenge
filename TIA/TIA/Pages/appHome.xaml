@@ -1,0 +1,145 @@
+﻿<Page
+    x:Class="TIA.appHome"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TIA"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:TIA.Models" 
+    mc:Ignorable="d">
+
+
+    <Grid Background = "{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <SplitView x:Name="MySplitView" DisplayMode="CompactInline"  IsPaneOpen="True" CompactPaneLength="50" OpenPaneLength="150">
+
+            <SplitView.Pane>
+
+                <StackPanel Background="SteelBlue">
+
+                    <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
+
+                    <StackPanel Orientation="Horizontal">
+
+                        <Button x:Name="MenuButton1" FontFamily="Segoe MDL2 Assets" Content="&#xE825;" Width="50" Height="50" Background="Transparent" Foreground="White" Click="Home_Click"/>
+
+                        <TextBlock Text="Home" FontSize="18" VerticalAlignment="Center" Foreground="White"   />
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+
+                        <Button x:Name="Reload" FontFamily="Segoe MDL2 Assets" Content="&#xE72C;"  Width="50" Height="50" Background="Transparent" Foreground="White" Click="Reload_Click" />
+
+                        <TextBlock Text="Reload" FontSize="18" VerticalAlignment="Center" Foreground="White" />
+
+                    </StackPanel>
+
+                </StackPanel>
+
+            </SplitView.Pane>
+
+            <SplitView.Content>
+                <StackPanel>
+
+                    <TextBlock HorizontalAlignment="Stretch" VerticalAlignment="Top" Text="Welcome to the IntelliLan IoT GUI" FontSize="50" FontWeight="Bold" Margin="20,30,20,0" Height="75"></TextBlock>
+                    
+                    <Grid Margin="20,30,20,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid x:Name="SecondGrid" Grid.Column="0" Grid.Row="0" Background="SteelBlue" Margin="0,0,5,0">
+                            <Border BorderBrush="{x:Null}" Height="370">
+                                <Grid>
+                                    <Viewbox Margin="10,0,10,0">
+                                        <Grid>
+                                            <TextBlock x:Name="ProximityIcon" HorizontalAlignment="Center" VerticalAlignment="Top" Text="&#xE8B8;" FontFamily="Segoe MDL2 Assets" FontSize="100" FontWeight="Bold" Margin="0,60,0,0"></TextBlock>
+                                            <TextBlock x:Name="ProximityTitle" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Proximity" FontSize="50" FontWeight="Bold" Margin="0,90,0,0"></TextBlock>
+                                            <ProgressBar x:Name="ProximityLoadingBar" IsIndeterminate="True"  Visibility="Visible" IsEnabled="True" Margin="0,200,0,0" Height="75" />
+                                            <TextBlock x:Name="Proximity" HorizontalAlignment="Center" VerticalAlignment="Center"  Visibility="Collapsed" Text="Test" FontSize="40" FontWeight="Bold" Height="75" Margin="0,200,0,0"></TextBlock>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+                            </Border>
+                        </Grid>
+
+                        <Grid x:Name="FirstGrid" Grid.Column="1" Grid.Row="0" Background="SteelBlue" Margin="0,0,5,0">
+                            <Border BorderBrush="{x:Null}" Height="370">
+                                <Grid>
+                                    <Viewbox Margin="10,0,10,0">
+                                        <Grid>
+                                            <TextBlock x:Name="DoorIcon" HorizontalAlignment="Center" VerticalAlignment="Top" Text="&#xE8AF;" FontFamily="Segoe MDL2 Assets" FontSize="100" FontWeight="Bold" Margin="0,50,0,0"></TextBlock>
+                                            <TextBlock x:Name="DoorTitle" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Door" FontSize="50" FontWeight="Bold" Margin="0,100,0,0"></TextBlock>
+                                            <ProgressBar x:Name="DoorLoadingBar" IsIndeterminate="True"  Visibility="Visible" IsEnabled="True" Margin="0,200,0,0" Height="75" />
+                                            <TextBlock x:Name="Door" HorizontalAlignment="Center" VerticalAlignment="Center"  Visibility="Collapsed" Text="Test" FontSize="40" FontWeight="Bold" Height="75" Margin="0,200,0,0"></TextBlock>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <Grid x:Name="ThirdGrid" Grid.Column="2" Grid.Row="0" Background="SteelBlue" Margin="0,0,5,0">
+                            <Border BorderBrush="{x:Null}" Height="370">
+                                <Grid>
+                                    <Viewbox Margin="10,0,10,0">
+                                        <Grid>
+                                            <TextBlock  x:Name="TemperatureIcon" HorizontalAlignment="Center" VerticalAlignment="Top" Text="&#xE753;" FontFamily="Segoe MDL2 Assets" FontSize="100" FontWeight="Bold" Margin="0,60,0,0"></TextBlock>
+                                            <TextBlock x:Name="TemperatureTitle" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Temperature" FontSize="50" FontWeight="Bold" Margin="0,90,0,0"></TextBlock>
+                                            <ProgressBar x:Name="TemperatureLoadingBar" IsIndeterminate="True"  Visibility="Visible" IsEnabled="True" Margin="0,200,0,0" Height="75" />
+                                            <TextBlock x:Name="Temperature" HorizontalAlignment="Center" VerticalAlignment="Center"   Visibility="Collapsed" Text="Test" FontSize="40" FontWeight="Bold" Height="75" Margin="0,200,0,0"></TextBlock>
+                                        </Grid>
+                                    </Viewbox>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                    <Grid Margin="20,30,20,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Column="0" Grid.Row="0" Margin="0,0,5,0">
+                            <TextBox x:Name="ProximityMax" HorizontalAlignment="stretch" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="60" PlaceholderText="" Padding="10,10"/>
+                            <Button x:Name="ProximityMaxSend" Content="Update..." HorizontalAlignment="stretch" VerticalAlignment="stretch" Padding="8,10" Click="Proximity_Click" Margin="0,75,0,0" />
+                        </Grid>
+                        <Grid Grid.Column="1" Grid.Row="0" Margin="0,0,5,0"> </Grid>
+                        <Grid Grid.Column="2" Grid.Row="0" Margin="0,0,5,0">
+                            <TextBox x:Name="TemperatureMax" HorizontalAlignment="stretch" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="60" PlaceholderText="" Padding="10,10"/>
+                            <Button x:Name="TemperatureMaxSend" Content="Update..." HorizontalAlignment="stretch" VerticalAlignment="stretch" Padding="8,10" Click="Temperature_Click" Margin="0,75,0,0" />
+                        </Grid>
+
+                    </Grid>
+                    <Grid Margin="20,30,20,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Column="0" Grid.Row="0" Margin="0,0,5,0"> </Grid>
+                        <Grid Grid.Column="1" Grid.Row="0" Margin="0,0,5,0">
+                            
+                        </Grid>
+                        <Grid Grid.Column="2" Grid.Row="0" Margin="0,0,5,0"></Grid>
+
+                    </Grid>
+
+                </StackPanel>
+
+            </SplitView.Content>
+
+        </SplitView>
+        
+    </Grid>
+
+</Page>
