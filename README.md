@@ -2,9 +2,13 @@
 Repository for my competition entry for Hackster/Microsoft/Arduino World Maker Challenge.
 
 This project consists of three devices:
+
 2 x Arduino Uno boards (AuthWayNFC & AuthWayFP)
+
 1 x MKR1000 (DoorGuard1000)
+
 1 x Windows Universal Application (TIA).
+
 
 
 
